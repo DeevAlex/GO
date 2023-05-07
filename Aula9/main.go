@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// "Herança", Lembrando no GO não existe o POO (Programação Orientada a Objetos), esse é um exemplo similar que chega mais proximo desse conceito
+// "Herança", Lembrando que no GO não existe a POO (Programação Orientada a Objetos), esse é um exemplo similar que chega mais proximo desse conceito
 
 type pessoa struct {
 	nome      string
