@@ -48,7 +48,36 @@ func main() {
 	fmt.Println(reflect.TypeOf(slice)) // retorna o tipo de alguma coisa que está dentro dos ()
 	fmt.Println(reflect.TypeOf(array1))
 
-	array2[1] = "Posição Alterada" // os slices funcionam como o ponteiro, se alterar um ele altera o outro 
+	array2[1] = "Posição Alterada" // os slices funcionam como o ponteiro, se alterar um ele altera o outro
 	fmt.Println(slice2)
+
+	// Arrays Internos
+
+	//              tipo  tamanho capacidade maxima
+	slice3 := make([]float32, 10, 11) // esse metodo make que vai alocar espaço na memoria para determinada coisa, como um slice por exemplo
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) // metodo len é o para ver o tamanho
+	fmt.Println(cap(slice3)) // metodo cap é o para ver a capacidade
+
+	slice3 = append(slice3, 1)
+	fmt.Println(slice3)
+	slice3 = append(slice3, 1)
+	fmt.Println(slice3)
+
+	// o Go quando vê que o slice vai passar a capacidade ele cria um outro array e dobra o tamanho dele
+
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+
+	// aqui caso não passe a capacidade maxima ele pega o tamanho que foi passado e usa como capacidade desse slice
+	slice4 := make([]float32, 5)
+
+	slice4 = append(slice4, 10)
+
+	fmt.Println(slice4)
+	fmt.Println(len(slice4))
+	fmt.Println(cap(slice4))
+
+	// resumindo slice é uma lista sem tamanho fixo e array é com tamanho fixo
 
 }
