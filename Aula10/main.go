@@ -19,7 +19,7 @@ func main() {
 
 	fmt.Println(variavel1, variavel2)
 
-	// PONTEIRO É UMA REFERENCIA DE MEMORIA, no caso do ponteiro pode alterar o valor da variavel que altera a outra varivael também, poruq ela só muda o valor não o endereço de memoria
+	// PONTEIRO É UMA REFERENCIA DE MEMORIA, no caso do ponteiro pode alterar o valor da variavel que altera a outra varivael também, porque ela só muda o valor não o endereço de memoria
 
 	var variavel3 int
 	var ponteiro *int
